@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable name="product" type="com.zappos.neeraj.ilovezappos.Product"/>
+    </data>
+<RelativeLayout
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_test"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="#FFF"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.zappos.neeraj.ilovezappos.Details">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView"
+        android:hint="Brand name"
+        android:textSize="30dp"
+        android:text="@{product.brandName}"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@{product.productName}"
+        android:textSize="20dp"
+        android:hint="Product name"
+        android:id="@+id/textView2"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="Add to Cart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button"
+        android:layout_marginRight="29dp"
+        android:layout_marginEnd="29dp"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/productImage"
+        android:layout_alignRight="@+id/productImage"
+        android:layout_alignEnd="@+id/productImage" />
+
+    <TextView
+        android:hint="price"
+        android:textSize="25dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/aprice"
+        android:text="@{product.price}"
+        android:layout_below="@+id/productImage"
+        android:layout_alignLeft="@+id/button"
+        android:layout_alignStart="@+id/button"
+        android:layout_marginLeft="31dp"
+        android:layout_marginStart="31dp" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/caricon"
+        android:scaleType="fitCenter"
+        android:clickable="true"
+        app:fabSize="normal"
+        app:srcCompat="@drawable/common_full_open_on_phone"
+        android:id="@+id/floatingActionButton2"
+        android:layout_alignTop="@+id/button"
+        android:layout_alignLeft="@+id/price"
+        android:layout_alignStart="@+id/price" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/offerLabel"
+        android:hint="Offer"
+        android:textSize="16dp"
+        android:layout_above="@+id/offer"
+        android:layout_alignRight="@+id/price"
+        android:layout_alignEnd="@+id/price" />
+
+    <ImageView
+        android:layout_width="175dp"
+        android:layout_height="150dp"
+        app:srcCompat="@drawable/common_google_signin_btn_icon_dark"
+        android:id="@+id/productImage"
+        android:layout_below="@+id/textView2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="29dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/offer"
+        android:text="@{product.percentOff}"
+        android:hint="offer"
+        android:textSize="20dp"
+        android:layout_alignBottom="@+id/productImage"
+        android:layout_alignLeft="@+id/offerLabel"
+        android:layout_alignStart="@+id/offerLabel" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/origPricLabel"
+        android:hint="Original Price"
+        android:text="Original Price"
+        android:textSize="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_alignTop="@+id/productImage"
+        android:layout_alignRight="@+id/textView"
+        android:layout_alignEnd="@+id/textView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/price"
+        android:hint="price"
+        android:text="@{product.originalPrice}"
+        android:textSize="20dp"
+        android:layout_below="@+id/origPricLabel"
+        android:layout_alignLeft="@+id/origPricLabel"
+        android:layout_alignStart="@+id/origPricLabel"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp" />
+
+
+</RelativeLayout>
+</layout>
