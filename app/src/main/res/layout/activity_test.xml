@@ -88,7 +88,7 @@
     <ImageView
         android:layout_width="175dp"
         android:layout_height="150dp"
-        app:srcCompat="@drawable/common_google_signin_btn_icon_dark"
+        app:srcCompat="@drawable/caricon"
         android:id="@+id/productImage"
         android:layout_below="@+id/textView2"
         android:layout_alignParentLeft="true"
