@@ -58,8 +58,8 @@ public class MainActivity extends AppCompatActivity {
                 }
                 @Override
                 public void onFailure(Call<SearchResult> call, Throwable t) {
-                    //update some field on the screen saying there was an error
-                    int i=11;
+                    //update some field on the screen saying there was an error. Just console out for now.
+                    System.out.println("Something wrong happened");
                 }
             });
         }
